@@ -190,7 +190,7 @@ async function main() {
                 available: true,
             },
 
-            // Bebas
+            // Bebidas
             {
                 name: 'Chá Verde Gelado',
                 description: 'Chá verde japonês (matcha) gelado, levemente adoçado.',
