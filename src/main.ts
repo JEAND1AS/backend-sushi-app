@@ -7,7 +7,7 @@ async function bootstrap() {
   const app = await NestFactory.create(AppModule);
 
   app.enableCors({
-    origin: ['http://localhost:3000', 'http://localhost:5173', 'http://localhost:5174', 'https://restaurant-sushi-app.vercel.app/' ],
+    origin: ['http://localhost:3000', 'http://localhost:5173', 'http://localhost:5174', 'https://restaurant-sushi-app.vercel.app'],
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH'],
     credentials: true,
   });

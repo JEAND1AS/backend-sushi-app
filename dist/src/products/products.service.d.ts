@@ -5,6 +5,7 @@ export declare class ProductsService {
     private prisma;
     constructor(prisma: PrismaService);
     findAll(category?: string): Promise<{
+        id: number;
         name: string;
         description: string;
         price: number;
@@ -12,11 +13,11 @@ export declare class ProductsService {
         category: string;
         featured: boolean;
         available: boolean;
-        id: number;
         createdAt: Date;
         updatedAt: Date;
     }[]>;
     findFeatured(): Promise<{
+        id: number;
         name: string;
         description: string;
         price: number;
@@ -24,11 +25,11 @@ export declare class ProductsService {
         category: string;
         featured: boolean;
         available: boolean;
-        id: number;
         createdAt: Date;
         updatedAt: Date;
     }[]>;
     findOne(id: number): Promise<{
+        id: number;
         name: string;
         description: string;
         price: number;
@@ -36,11 +37,11 @@ export declare class ProductsService {
         category: string;
         featured: boolean;
         available: boolean;
-        id: number;
         createdAt: Date;
         updatedAt: Date;
     }>;
     create(data: CreateProductDto): Promise<{
+        id: number;
         name: string;
         description: string;
         price: number;
@@ -48,11 +49,11 @@ export declare class ProductsService {
         category: string;
         featured: boolean;
         available: boolean;
-        id: number;
         createdAt: Date;
         updatedAt: Date;
     }>;
     update(id: number, data: UpdateProductDto): Promise<{
+        id: number;
         name: string;
         description: string;
         price: number;
@@ -60,11 +61,11 @@ export declare class ProductsService {
         category: string;
         featured: boolean;
         available: boolean;
-        id: number;
         createdAt: Date;
         updatedAt: Date;
     }>;
     remove(id: number): Promise<{
+        id: number;
         name: string;
         description: string;
         price: number;
@@ -72,7 +73,6 @@ export declare class ProductsService {
         category: string;
         featured: boolean;
         available: boolean;
-        id: number;
         createdAt: Date;
         updatedAt: Date;
     }>;

@@ -6,7 +6,7 @@ import { UpdateProductDto } from './dto/update-product.dto';
 @Injectable()
 export class ProductsService {
     constructor(private prisma: PrismaService) { }
-    
+
     async findAll(category?: string) {
         return this.prisma.product.findMany({
             where: category ? { category } : undefined,
