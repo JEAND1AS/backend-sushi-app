@@ -30,12 +30,29 @@ let ProductsService = class ProductsService {
         });
     }
     async findOne(id) {
-        return this.prisma.product.findUnique({
+        const product = await this.prisma.product.findUnique({
             where: { id },
         });
+        if (!product) {
+            throw new common_1.NotFoundException(`Produto com ID ${id} não encontrado`);
+        }
+        return product;
     }
     async create(data) {
         return this.prisma.product.create({ data });
+    }
+    async update(id, data) {
+        await this.findOne(id);
+        return this.prisma.product.update({
+            where: { id },
+            data,
+        });
+    }
+    async remove(id) {
+        await this.findOne(id);
+        return this.prisma.product.delete({
+            where: { id },
+        });
     }
 };
 exports.ProductsService = ProductsService;

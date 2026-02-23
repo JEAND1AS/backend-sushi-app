@@ -202,7 +202,7 @@ async function main() {
                 name: 'Ramune',
                 description: 'Refrigerante japonês original com bolinha de vro. 330ml.',
                 price: 18.9,
-                image: 'https://exoticworld.us/cdn/shop/files/ramunestrawberry.png?v=1689724720&wth=1280',
+                image: 'https://www.japancandystore.com/cdn/shop/articles/Ramune-featured-3_copy_0d1f9461-9759-4d9a-b357-22aebad46827_900x.jpg?v=1760513152',
                 category: 'Bebidas',
                 featured: true,
                 available: true,
